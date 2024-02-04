@@ -9,7 +9,8 @@ hunt = Base(
 )
 
 functions = [
-   Replit.__check__
+   Replit.__check__,
+   Twitter.__check__
 ]
 
 for function in functions:
