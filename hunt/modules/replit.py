@@ -34,7 +34,7 @@ class Replit:
                  structure[1]['exists'] = False
             except Exception as E:
                    if request.status_code == 429:
-                      structure['ratelimited'] = True; base.output.append(structure)
+                      structure[1]['ratelimited'] = True; base.output.append(structure)
                       return
                    structure[1]['error'] = type(E)
                    structure[1]['error_description'] = str(E)
