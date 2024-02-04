@@ -1,4 +1,4 @@
-# `🔎` `AccountHunt`
+# `🔎` `AccountHunt Beta`
 ## `★` `WHAT DOES IT DO?`
 **AccountHunt** checks whether an email is used on a multiple sites with various methods. All done without alerting to target. This is written fully in Python, and compatible with Python 3.10+.
 ## `★` `FEATURES`
