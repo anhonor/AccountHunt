@@ -29,7 +29,7 @@ def __get_client__(client_identifier = __get_client_identifier__()) -> tls_clien
     return tls_client.Session(client_identifier = client_identifier, random_tls_extension_order = True)
 
 class Base:
-      def __init__(base, email: str, proxy: str | None = None):
+      def __init__(base, email: str):
           base.output = []
           base.agent = ua_generator.generate(device = ('desktop'), browser = ('chrome'))
           base.email = email
