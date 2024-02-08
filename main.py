@@ -1,6 +1,7 @@
 import colorama
 from hunt import *
 from hunt.modules.replit import Replit
+from hunt.modules.twitter import Twitter
 
 hunt = Base(
     input(
