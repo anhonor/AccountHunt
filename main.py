@@ -19,4 +19,4 @@ for function in functions:
 
 for response in hunt.output:
     if response[1]['exists']:
-       print(f'{colorama.Style.BRIGHT}{colorama.Fore.LIGHTBLUE_EX}-{colorama.Style.RESET_ALL} {response[1]["module_domain"]} ({response[0]})')
+       print(f'{colorama.Style.BRIGHT}{colorama.Fore.LIGHTBLUE_EX}*{colorama.Style.RESET_ALL} ~ {response[1]["module_domain"]}')
