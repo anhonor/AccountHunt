@@ -12,7 +12,7 @@ proxies = list(proxy for proxy in open(setting['proxy_file'], 'r', encoding = 'u
 def __get_proxy__() -> str | None:
     if len(proxies):
        return random.choice(proxies).strip()
-    
+
 def __get_client_identifier__() -> str:
     return random.choice([
         'chrome_117',
@@ -33,7 +33,7 @@ class Base:
           base.output = []
           base.agent = ua_generator.generate(device = ('desktop'), browser = ('chrome'))
           base.email = email
-      
+
       def __base_headers__(base, headers: dict = {}) -> dict:
           return {
             'Accept-Encoding': 'gzip, deflate, br',
@@ -44,7 +44,7 @@ class Base:
            **headers,
             'User-Agent': base.agent.text
           }
-      
+
       def __base_structure__(
           base, 
           module_name: str, 
@@ -58,6 +58,7 @@ class Base:
           return (module_name, {
              'module_domain': module_domain,
              'exists': exists,
+             'additional_info': {},
              'ratelimited': ratelimited,
              'response': response,
              'response_status_code': response_status_code,
