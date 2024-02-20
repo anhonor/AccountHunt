@@ -33,11 +33,11 @@ class Sleeper:
                  if not request.json().get('errors') and request.json().get('data') and request.json()['data'].get('login_context_by_email_or_phone_or_username'):
                     structure[1]['exists'] = True
                     structure[1]['additional_info'] = {
-                       'Display Name': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('display_name')),
-                       'Masked Email': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('masked_email')),
-                       'Masked Phone': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('masked_phone')),
-                       'Real Name': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('real_name')),
-                       'User ID': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('user_id'))
+                        'Display Name': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('display_name')),
+                        'Masked Email': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('masked_email')),
+                        'Masked Phone': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('masked_phone')),
+                        'Real Name': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('real_name')),
+                        'User ID': str(request.json()['data']['login_context_by_email_or_phone_or_username'].get('user_id'))
                     }
             except Exception as E:
                    if request.status_code == 429:
