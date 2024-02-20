@@ -9,6 +9,14 @@
 + Easy to Adjunct
 + Supports Proxies
 ```
+## `★` `MODULES`
+```
+1. Microsoft
+2. Pandora
+3. Replit
+4. Sleeper
+5. Twitter
+```
 ## `★` `SETUP`
 ```
 - python3.12 -m pip install -r requirements.txt
