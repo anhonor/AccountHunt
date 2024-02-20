@@ -75,10 +75,10 @@ class Microsoft:
                          for hint in request.json()['Credentials']['OtcLoginEligibleProofs']:
                              email_hints.append(hint['display'])
                    structure[1]['additional_info'] = {
-                     'Username': username,
-                     'Location': location,
-                     'Federated Auths': federated_auths,
-                     'Email Hints': email_hints
+                       'Username': username,
+                       'Location': location,
+                       'Federated Auths': federated_auths,
+                       'Email Hints': email_hints
                    }
                 else:
                   structure[1]['exists'] = False
