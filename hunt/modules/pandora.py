@@ -48,12 +48,12 @@ class Pandora:
                       followers = profile_request.text.split('<div class="button-doubleLayer__number" data-qa="profilePage_followers_tab_count">')[1].split('</div>')[0]
                       following = profile_request.text.split('<div class="button-doubleLayer__number" data-qa="profilePage_following_tab_count">')[1].split('</div>')[0]
                       structure[1]['additional_info'] = {
-                        'Username': profile,
-                        'Bio': bio,
-                        'Stations': stations,
-                        'Likes': likes,
-                        'Followers': followers,
-                        'Following': following
+                         'Username': profile,
+                         'Bio': bio,
+                         'Stations': stations,
+                         'Likes': likes,
+                         'Followers': followers,
+                         'Following': following
                       }
                  except Exception as E:
                         structure[1]['error'] = type(E)
