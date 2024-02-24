@@ -13,9 +13,10 @@
 ```
 1. Microsoft
 2. Pandora
-3. Replit
-4. Sleeper
-5. Twitter
+3. Poshmark
+4. Replit
+5. Sleeper
+6. Twitter
 ```
 ## `★` `SETUP`
 ```
