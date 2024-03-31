@@ -34,11 +34,11 @@ class Poshmark:
                        'sec-fetch-user': '?1'
                    }))
                    if '"$_closet":{"closetUserInfo":' in closet_request.text:
-                      full_name = closet_request.text.split('"full_name":"')[1].split('"')[0]
+                      full_name = closet_request.text.split('"data":{')[1].split('"full_name":')[1].split('"')[1] if '"full_name":' in closet_request.text.split('"data":{')[1] else None
                       country = closet_request.text.split('"home_domain":"')[1].split('"')[0].upper()
                       gender = closet_request.text.split('"gender":"')[1].split('"')[0].title()
-                      city = closet_request.text.split('"profile":{"city":"')[1].split('"')[0] if '"profile":{"city":"' in closet_request.text else None
-                      state = closet_request.text.split('"profile":{')[1].split('"state":"')[1].split('"')[0] if '"state":"' in closet_request.text.split('"profile":{')[1] else None
+                      city = closet_request.text.split('"profile_v2":{"city":"')[1].split('"')[0] if '"profile_v2":{"city":"' in closet_request.text else None
+                      state = closet_request.text.split('"profile_v2":{')[1].split('"state":"')[1].split('"')[0] if '"state":"' in closet_request.text.split('"profile_v2":{')[1] else None
                       twitter = closet_request.text.split('"tw_info":"')[1].split('"')[0] if '"tw_info":"' in closet_request.text else None
                       facebook = closet_request.text.split('"fb_info":"')[1].split('"')[0] if '"fb_info":"' in closet_request.text else None
                       tumblr = closet_request.text.split('tm_info":"')[1].split('"')[0] if 'tm_info":"' in closet_request.text else None
@@ -77,5 +77,3 @@ class Poshmark:
                  structure[1]['error'] = str(type(E))
                  structure[1]['error_description'] = str(E)
           base.output.append(structure)
-
-# ~ pretty rough, will update soon. ~ 
